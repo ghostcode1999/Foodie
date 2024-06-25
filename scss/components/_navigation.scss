@@ -1,0 +1,75 @@
+// COMPONENTS
+//==========================================================
+/*---------------------------
+    #PRIMARY NAVIGATION
+ ---------------------------*/
+//
+@use "helpers" as *;
+
+.#{$prefix}primary-nav {
+  --_nav-gap: #{$navigation-gap};
+  --_nav-color: #{$navigation-color};
+  --_nav-color-hover: #{$navigation-color-hover};
+  --_nav-font-size: #{$navigation-font-size};
+  --_nav-font-weight: #{$navigation-font-weight};
+  --_nav-text-transform: #{$navigation-text-transform};
+  --_nav-link-text-decoration: #{$navigation-link-text-decoration};
+}
+
+.#{$prefix}nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--_nav-gap);
+  font-size: var(--_nav-font-size);
+  font-weight: var(--_nav-font-weight);
+
+  a {
+    color: var(--_nav-color);
+    text-decoration: var(--_nav-link-text-decoration);
+    @if (var(--_nav-text-transform)) {
+      text-transform: var(--_nav-text-transform);
+    }
+
+    &:is(:hover, :focus-visible) {
+      color: var(--_nav-color-hover);
+    }
+  }
+
+  .nav-toggler {
+    @include mq(lg) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 10px;
+      height: 3px;
+      border-radius: var(--size-2);
+      background-color: var(--clr-neutral-200);
+      transition: var(--transition-250);
+
+      &:nth-of-type(2) {
+        width: 20px;
+        margin-block: 4px;
+      }
+      &:nth-of-type(3) {
+        margin-inline-start: auto;
+      }
+    }
+
+    &.is-active span {
+      &:nth-of-type(1) {
+        transform: translate(1.5px, 3.5px) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(-1.5px, -3.5px) rotate(45deg);
+      }
+    }
+  }
+}

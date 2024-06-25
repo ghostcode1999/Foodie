@@ -1,0 +1,13 @@
+// LAYOUT
+//=======================================================
+/*--------------------------
+  #WRAPPER
+---------------------------*/
+//
+@use "../helpers" as *;
+
+@layer layout {
+  .#{$prefix}flow > *:where(:not(:first-child)) {
+    margin-block-start: var(--_flow-spacer, $flow-spacer);
+  }
+}

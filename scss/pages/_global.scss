@@ -1,0 +1,15 @@
+// PAGES
+//==========================================================
+/*====================
+    #GLOBAL RULES
+======================*/
+
+// This file can contain global rules shared by all pages
+@use "helpers" as *;
+
+/*-------------
+    #SECTIONS
+--------------*/
+  .section {
+    padding-block: $section-padding-block;
+  }

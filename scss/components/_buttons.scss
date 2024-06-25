@@ -1,0 +1,78 @@
+// COMPONENTS
+//==========================================================
+/*---------------------------
+    #BUTTONS
+ ---------------------------*/
+
+// This is an example of a button component partial
+@use "../helpers" as *;
+
+//** Buttons specific variables
+// ...
+// … include any button-specific:
+// - functions
+// - mixins
+// - placeholders
+
+//** Base styles: basic classes **//
+.#{$prefix}btn {
+  --_button-padding: #{$button-padding};
+  --_button-border: #{$button-border};
+  --_button-border-radius: #{$button-border-radius};
+  --_button-background: #{$button-background};
+  --_button-color: #{$button-color};
+  --_button-font-family: #{$button-font-family};
+  --_button-font-size: #{$button-font-size};
+  --_button-font-weight: #{$button-font-weight};
+  --_button-text-transform: #{$button-text-transform};
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // width: fit-content;
+  padding: var(--_button-padding);
+  border: var(--_button-border);
+  border-radius: var(--_button-border-radius);
+  background-color: var(--_button-background);
+  color: var(--_button-color);
+  font-family: var(--_button-font-family);
+  font-size: var(--_button-font-size);
+  font-weight: var(--_button-font-weight);
+  line-height: 1;
+  @if (var(--_button-text-transform)) {
+    text-transform: var(--_button-text-transform);
+  }
+  text-decoration: none;
+  cursor: pointer;
+  transition: $transition-250;
+
+  //** Alternate buttons: modifiers **//
+  &[data-type="primary"] {
+    --_button-background: #{$button-primary-background};
+    --_button-color: #{$button-primary-color};
+
+    &:is(:hover, :focus-visible) {
+      --_button-background: #{$button-primary-background-hover};
+      --_button-color: #{$button-primary-color-hover};
+    }
+  }
+
+  &[data-type="accent"] {
+    --_button-background: #{$button-accent-background};
+    --_button-color: #{$button-accent-color};
+
+    &:is(:hover, :focus-visible) {
+      --_button-background: #{$button-accent-background-hover};
+      --_button-color: #{$button-accent-color-hover};
+    }
+  }
+}
+
+//** Button Sizes
+.#{$prefix}btn-lg {
+  // ...
+}
+
+.#{$prefix}btn-sm {
+  // ...
+}

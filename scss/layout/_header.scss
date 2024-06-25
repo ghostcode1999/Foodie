@@ -1,0 +1,44 @@
+// LAYOUT
+//==========================================================
+/*--------------------
+    #PRIMARY HEADER
+---------------------*/
+
+@use "helpers" as *;
+
+@layer layout {
+  .#{$prefix}primary-header {
+    position: $primary-header-position;
+    @if (
+      $primary-header-position == sticky or $primary-header-position == fixed
+    ) {
+      inset-block-start: 0;
+      inset-inline-start: 0;
+    }
+    z-index: 4;
+    color: $primary-header-color;
+    background: $primary-header-background;
+    padding: $primary-header-padding;
+
+    &.is-active {
+      animation: slideUp 1s ease forwards;
+    }
+
+    &__inner {
+      position: relative;
+      display: flex;
+      gap: var(--size-4);
+      align-items: $primary-header-alignment;
+      justify-content: $primary-header-jusitifcation-lg;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

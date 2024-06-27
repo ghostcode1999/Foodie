@@ -53,7 +53,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
 
@@ -64,6 +64,700 @@
   </head>
   <body>
     <div class="main-grid">
+      <!-- Overlay -->
+      <div class="overlay" data-close-btn></div>
+      <!-- Start Header -->
+      <header class="primary-header | wrapper-grid">
+        <div class="primary-header__inner | row">
+          <a href="#" class="logo | col-3 | fs-700 fw-bold"
+            >Foodie<span class="text-primary-400">.</span></a
+          >
+          <nav class="primary-nav | col-9">
+            <ul class="nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <button
+              class="nav-search-btn"
+              aria-label="Search button"
+              data-search-btn
+            >
+              <i class="fa fa-search"></i>
+            </button>
+            <a
+              href="#"
+              class="nav-action-btn | btn btn-hover"
+              data-type="primary"
+              >Reservation</a
+            >
+            <button
+              class="nav-toggler"
+              aria-label="Toggle menu"
+              data-nav-toggler
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <!-- Search Modal -->
+      <form action="#" class="search-modal">
+        <input
+          type="search"
+          name="search"
+          placeholder="Type keywords here..."
+          aria-label="Search here"
+        />
+        <button type="submit" aria-label="Submit search">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <!-- End Header -->
+      <main class="main-grid">
+        <!-- Start Hero -->
+        <section class="hero | text-primary-200">
+          <div class="hero-inner | row start-sm-3 start-lg-2">
+            <div class="hero-content | flow">
+              <p class="fs-500 fw-medium text-primary-500">Eat Sleep And</p>
+              <h1 class="heading-1">Supper delicious<br />Burger in town!</h1>
+              <p>
+                Food is any substance consumed to provide nutritional support
+                for an organism.
+              </p>
+              <button class="btn btn-hover" data-type="primary">
+                Book a table
+              </button>
+            </div>
+
+            <figure class="hero-banner">
+              <img src="assets/imgs/hero-banner-bg.png" alt="#" />
+              <img
+                src="assets/imgs/hero-banner.png"
+                alt="#"
+                class="hero-banner-img"
+              />
+            </figure>
+          </div>
+        </section>
+        <!-- End Hero -->
+        <!-- Start Promo -->
+        <section
+          class="promo section section-with-divider | row-cols-sm-2 row-cols-lg-3 | bg-neutral-100"
+        >
+          <div class="promo-wrapper | row">
+            <div class="promo-item">
+              <img
+                src="assets/imgs/promo-icon-1.svg"
+                alt="#"
+                class="promo-icon"
+              />
+              <h3>Maxican Pizza</h3>
+              <p>
+                Food is any substance consumed to provide nutritional support
+                for an organism.
+              </p>
+              <img src="assets/imgs/promo-1.png" alt="#" />
+            </div>
+            <div class="promo-item">
+              <img
+                src="assets/imgs/promo-icon-2.svg"
+                alt="#"
+                class="promo-icon"
+              />
+              <h3>Soft Drinks</h3>
+              <p>
+                Food is any substance consumed to provide nutritional support
+                for an organism.
+              </p>
+              <img src="assets/imgs/promo-2.png" alt="#" />
+            </div>
+            <div class="promo-item">
+              <img
+                src="assets/imgs/promo-icon-3.svg"
+                alt="#"
+                class="promo-icon"
+              />
+              <h3>French Fry</h3>
+              <p>
+                Food is any substance consumed to provide nutritional support
+                for an organism.
+              </p>
+              <img src="assets/imgs/promo-3.png" alt="#" />
+            </div>
+          </div>
+        </section>
+        <!-- End Promo -->
+        <!-- Start About -->
+        <section
+          class="about section section-with-divider grey | row-cols-md-2 row-gap-10 gap-lg-10"
+        >
+          <div class="row">
+            <figure class="about-banner">
+              <img src="assets/imgs/about-banner.png" alt="#" />
+              <img
+                src="assets/imgs/sale-shape-red.png"
+                alt="#"
+                class="shape-img"
+              />
+            </figure>
+
+            <div class="about-content | flow">
+              <h2 class="heading-3">
+                Caferio, Burgers, and Best Pizzas
+                <span class="text-primary-500">in Town!</span>
+              </h2>
+              <p>
+                The restaurants in Hangzhou also catered to many northern
+                Chinese who had fled south from Kaifeng during the Jurchen
+                invasion of the 1120s, while it is also known that many
+                restaurants were run by families.
+              </p>
+              <ul class="flow | fs-300 fw-semibold">
+                <li>
+                  <i class="fa-regular fa-check-circle"></i>
+                  <span>Delicious & Healthy Foods</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-check-circle"></i>
+                  <span>Spacific Family And Kids Zone</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-check-circle"></i>
+                  <span>Music & Other Facilities</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-check-circle"></i>
+                  <span>Fastest Food Home Delivery</span>
+                </li>
+              </ul>
+              <button class="btn btn-hover" data-type="primary">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- End About -->
+        <!-- Start Food Menu -->
+        <section class="food-menu section | bg-neutral-100">
+          <div class="section__header | row start-lg-4">
+            <h3 class="section__title">Popular Dishes</h3>
+            <h4 class="section__subtitle">Our Delicious <span>Foods</span></h4>
+            <p class="section__desc">
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+          </div>
+          <ul class="filter-list | row start-4">
+            <li><button class="filter-btn | is-active">All</button></li>
+            <li><button class="filter-btn">Pizza</button></li>
+            <li><button class="filter-btn">Burger</button></li>
+            <li><button class="filter-btn">Drinks</button></li>
+            <li><button class="filter-btn">Sandwich</button></li>
+          </ul>
+          <ul
+            class="menu-list | row row-cols-md-2 row-cols-lg-3 col-gap-0 row-gap-8 gap-md-8"
+          >
+            <li class="menu-item">
+              <span class="item-badge">-15%</span>
+              <figure class="item-img">
+                <img src="assets/imgs/food-menu-1.png" alt="#" />
+                <button class="item-btn | btn" data-type="accent">
+                  Order Now
+                </button>
+              </figure>
+              <span class="item-cat">Chicken</span>
+              <h4>Fried Chicken Unlimited</h4>
+              <p class="item-price">
+                Price:
+                <span class="new-price">$49.00</span>
+                <span class="old-price">$69.00</span>
+              </p>
+            </li>
+            <li class="menu-item">
+              <span class="item-badge">-10%</span>
+              <figure class="item-img">
+                <img src="assets/imgs/food-menu-2.png" alt="#" />
+                <button class="item-btn | btn" data-type="accent">
+                  Order Now
+                </button>
+              </figure>
+              <span class="item-cat">Noddles</span>
+              <h4>Burger King Whopper</h4>
+              <p class="item-price">
+                Price:
+                <span class="new-price">$29.00</span>
+                <span class="old-price">$39.00</span>
+              </p>
+            </li>
+            <li class="menu-item">
+              <span class="item-badge">-25%</span>
+              <figure class="item-img">
+                <img src="assets/imgs/food-menu-3.png" alt="#" />
+                <button class="item-btn | btn" data-type="accent">
+                  Order Now
+                </button>
+              </figure>
+              <span class="item-cat">Pizzas</span>
+              <h4>White Castle Pizzas</h4>
+              <p class="item-price">
+                Price:
+                <span class="new-price">$49.00</span>
+                <span class="old-price">$69.00</span>
+              </p>
+            </li>
+            <li class="menu-item">
+              <span class="item-badge">-20%</span>
+              <figure class="item-img">
+                <img src="assets/imgs/food-menu-4.png" alt="#" />
+                <button class="item-btn | btn" data-type="accent">
+                  Order Now
+                </button>
+              </figure>
+              <span class="item-cat">Burrito</span>
+              <h4>Bell Burrito Supreme</h4>
+              <p class="item-price">
+                Price:
+                <span class="new-price">$59.00</span>
+                <span class="old-price">$69.00</span>
+              </p>
+            </li>
+            <li class="menu-item">
+              <span class="item-badge">-5%</span>
+              <figure class="item-img">
+                <img src="assets/imgs/food-menu-5.png" alt="#" />
+                <button class="item-btn | btn" data-type="accent">
+                  Order Now
+                </button>
+              </figure>
+              <span class="item-cat">Nuggets</span>
+              <h4>Kung Pao Chicken BBQ</h4>
+              <p class="item-price">
+                Price:
+                <span class="new-price">$49.00</span>
+                <span class="old-price">$69.00</span>
+              </p>
+            </li>
+            <li class="menu-item">
+              <span class="item-badge">-15%</span>
+              <figure class="item-img">
+                <img src="assets/imgs/food-menu-6.png" alt="#" />
+                <button class="item-btn | btn" data-type="accent">
+                  Order Now
+                </button>
+              </figure>
+              <span class="item-cat">Chicken</span>
+              <h4>Wendy's Chicken</h4>
+              <p class="item-price">
+                Price:
+                <span class="new-price">$49.00</span>
+                <span class="old-price">$69.00</span>
+              </p>
+            </li>
+          </ul>
+        </section>
+        <!-- End Food Menu -->
+        <!-- Start CTA -->
+        <section
+          class="cta section section-with-divider | row-cols-md-2 row-gap-10 gap-lg-10 | text-neutral-000"
+        >
+          <div class="cta-wrapper | row">
+            <div class="cta-content | flow">
+              <h2 class="heading-3">
+                The Foodie Have Excellent Of
+                <span class="text-primary-500">Quality Burgers!</span>
+              </h2>
+              <p class="text-neutral-200">
+                The restaurants in Hangzhou also catered to many northern
+                Chinese who had fled south from Kaifeng during the Jurchen
+                invasion of the 1120s, while it is also known that many
+                restaurants were run by families.
+              </p>
+              <button class="btn btn-hover" data-type="primary">
+                Order Now
+              </button>
+            </div>
+            <figure class="cta-banner">
+              <img src="assets/imgs/cta-banner.png" alt="#" class="cta-img" />
+              <img src="assets/imgs/sale-shape.png" alt="#" class="shape-img" />
+            </figure>
+          </div>
+        </section>
+        <!-- End CTA -->
+        <!-- Start Delivery -->
+        <section
+          class="delivery section section-with-divider grey | row-cols-md-2 row-gap-10 gap-lg-10"
+        >
+          <div class="delivery-wrapper | row">
+            <div class="delivery-content | flow">
+              <h2 class="heading-3">
+                A Moments Of Delivered On
+                <span class="text-primary-500">Right Time</span> & Place
+              </h2>
+              <p>
+                The restaurants in Hangzhou also catered to many northern
+                Chinese who had fled south from Kaifeng during the Jurchen
+                invasion of the 1120s, while it is also known that many
+                restaurants were run by families.
+              </p>
+              <button class="btn btn-hover" data-type="primary">
+                Order Now
+              </button>
+            </div>
+            <figure class="delivery-banner">
+              <img
+                src="assets/imgs/delivery-boy.svg"
+                alt="#"
+                class="delivery-img"
+                data-delivery-boy
+              />
+            </figure>
+          </div>
+        </section>
+        <!-- End Delivery -->
+        <!-- Start Testimonials -->
+        <section
+          class="testimonials section section-with-divider | bg-neutral-100"
+        >
+          <div class="section__header | row start-lg-4">
+            <h3 class="section__title">Testimonials</h3>
+            <h4 class="section__subtitle">
+              Our Customers <span>Reviews</span>
+            </h4>
+            <p class="section__desc">
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+          </div>
+          <ul class="row row-cols-sm-2 row-cols-lg-3">
+            <li class="review-item | flow">
+              <div class="review-profile">
+                <img src="assets/imgs/avatar-1.jpg" alt="#" />
+                <div class="flow" style="--_flow-spacer: var(--size-rem-2)">
+                  <h4 class="fs-400">Robert William</h4>
+                  <p class="fs-300">CEO Kingfisher</p>
+                </div>
+              </div>
+
+              <p>
+                "I would be lost without restaurant. I would like to personally
+                thank you for your outstanding product."
+              </p>
+              <ul class="review-rating">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+            </li>
+            <li class="review-item | flow">
+              <div class="review-profile">
+                <img src="assets/imgs/avatar-2.jpg" alt="#" />
+                <div class="flow" style="--_flow-spacer: var(--size-rem-2)">
+                  <h4 class="fs-400">Thomas Josef</h4>
+                  <p class="fs-300">CEO Getforce</p>
+                </div>
+              </div>
+
+              <p>
+                "I would be lost without restaurant. I would like to personally
+                thank you for your outstanding product."
+              </p>
+              <ul class="review-rating">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+            </li>
+            <li class="review-item | flow">
+              <div class="review-profile">
+                <img src="assets/imgs/avatar-3.jpg" alt="#" />
+                <div class="flow" style="--_flow-spacer: var(--size-rem-2)">
+                  <h4 class="fs-400">Charles Richard</h4>
+                  <p class="fs-300">CEO Angela</p>
+                </div>
+              </div>
+
+              <p>
+                "I would be lost without restaurant. I would like to personally
+                thank you for your outstanding product."
+              </p>
+              <ul class="review-rating">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <!-- End Testimonials -->
+        <!-- Start Banner -->
+        <section class="banner section section-with-divider grey">
+          <div class="row row-cols-lg-2 | text-neutral-100">
+            <div class="banner-card banner-card-lg | stack align-items-center">
+              <figure>
+                <img src="assets/imgs/banner-1.jpg" alt="#" />
+              </figure>
+              <div class="banner-content | flow">
+                <h2>
+                  50% Off Now! <br />
+                  Discount For Delicious Tasty Burgers!
+                </h2>
+                <p>Sale off 50% only this week</p>
+                <button class="btn" data-type="primary">Order Now</button>
+              </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="banner-card banner-card-sm | stack | col-lg-6">
+                <figure>
+                  <img src="assets/imgs/banner-2.jpg" alt="#" />
+                </figure>
+                <div class="banner-content | flow">
+                  <h3>Delicious Pizza</h3>
+                  <p>50% Off Now</p>
+                  <button class="btn" data-type="primary">Order Now</button>
+                </div>
+              </div>
+              <div class="banner-card banner-card-sm | stack | col-lg-6">
+                <figure>
+                  <img src="assets/imgs/banner-3.jpg" alt="#" />
+                </figure>
+                <div class="banner-content | flow">
+                  <h3>American Burgers</h3>
+                  <p>50% Off Now</p>
+                  <button class="btn" data-type="primary">Order Now</button>
+                </div>
+              </div>
+              <div class="banner-card banner-card-sm | stack | col-lg-12">
+                <figure>
+                  <img src="assets/imgs/banner-4.jpg" alt="#" />
+                </figure>
+                <div class="banner-content | flow">
+                  <h3>Tasty Buzzed Pizza</h3>
+                  <p>50% Off Now</p>
+                  <button class="btn" data-type="primary">Order Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Banner -->
+        <!-- Start Blog -->
+        <section class="blog section section-with-divider | bg-neutral-100">
+          <div class="section__header | row start-lg-4">
+            <h3 class="section__title">Latest Blog Posts</h3>
+            <h4 class="section__subtitle">
+              This Is All About <span>Foods</span>
+            </h4>
+            <p class="section__desc">
+              Food is any substance consumed to provide nutritional support for
+              an organism.
+            </p>
+          </div>
+          <ul
+            class="blog-list | row row-cols-md-2 row-cols-lg-3 col-gap-0 row-gap-8 gap-md-8"
+          >
+            <li class="blog-card">
+              <figure class="card-banner">
+                <img src="assets/imgs/blog-1.jpg" alt="#" />
+                <span class="card-badge">Pizza</span>
+              </figure>
+              <div class="card-content | flow">
+                <div class="card-meta">
+                  <a href="#">
+                    <i class="fa-regular fa-calendar"></i>
+                    <time datetime="2024-06-26">JUN 06 2024</time>
+                  </a>
+                  <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Jonathan Smith</span>
+                  </a>
+                </div>
+                <h4>
+                  <a href="#" class="card-title"
+                    >What Do You Think About Cheese Pizza Recipes?</a
+                  >
+                </h4>
+                <p class="card-text">
+                  Financial experts support or help you to to find out which way
+                  you can raise your funds more...
+                </p>
+                <a href="#" class="card-link"
+                  >Read More <i class="fa fa-arrow-circle-right"></i
+                ></a>
+              </div>
+            </li>
+            <li class="blog-card">
+              <figure class="card-banner">
+                <img src="assets/imgs/blog-2.jpg" alt="#" />
+                <span class="card-badge">Burger</span>
+              </figure>
+              <div class="card-content | flow">
+                <div class="card-meta">
+                  <a href="#">
+                    <i class="fa-regular fa-calendar"></i>
+                    <time datetime="2024-06-26">JUN 06 2024</time>
+                  </a>
+                  <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Jonathan Smith</span>
+                  </a>
+                </div>
+                <h4>
+                  <a href="#" class="card-title"
+                    >Making Chicken Strips With New Delicious Ingridents.</a
+                  >
+                </h4>
+                <p class="card-text">
+                  Financial experts support or help you to to find out which way
+                  you can raise your funds more...
+                </p>
+                <a href="#" class="card-link"
+                  >Read More <i class="fa fa-arrow-circle-right"></i
+                ></a>
+              </div>
+            </li>
+            <li class="blog-card">
+              <figure class="card-banner">
+                <img src="assets/imgs/blog-3.jpg" alt="#" />
+                <span class="card-badge">Chicken</span>
+              </figure>
+              <div class="card-content | flow">
+                <div class="card-meta">
+                  <a href="#">
+                    <i class="fa-regular fa-calendar"></i>
+                    <time datetime="2024-06-26">JUN 06 2024</time>
+                  </a>
+                  <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Jonathan Smith</span>
+                  </a>
+                </div>
+                <h4>
+                  <a href="#" class="card-title"
+                    >Innovative Hot Chessyraw Pasta Make Creator Fact.</a
+                  >
+                </h4>
+                <p class="card-text">
+                  Financial experts support or help you to to find out which way
+                  you can raise your funds more...
+                </p>
+                <a href="#" class="card-link"
+                  >Read More <i class="fa fa-arrow-circle-right"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- End Blog -->
+      </main>
+      <!-- Start Footer -->
+      <footer class="primary-footer main-grid">
+        <div class="primary-footer__inner">
+          <div class="row row-cols-md-2 row-cols-lg-3 row-gap-10 col-gap-md-8">
+            <div class="flow">
+              <h4>
+                <a href="#" class="logo | text-neutral-900 fs-700 fw-bold"
+                  >Foodie<span class="text-primary-400">.</span></a
+                >
+              </h4>
+              <p>
+                Financial experts support or help you to to find out which way
+                you can raise your funds more.
+              </p>
+              <ul class="primary-footer__social">
+                <li>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="flow">
+              <h4 class="primary-footer__title">Contact Info</h4>
+              <ul class="flow">
+                <li>
+                  <p>+1 (062) 109-9222</p>
+                </li>
+                <li>
+                  <p>Info@YourGmail24.com</p>
+                </li>
+                <li>
+                  <p>153 Williamson Plaza, Maggieberg, MT 09514</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="flow">
+              <h4 class="primary-footer__title">Opening Hours</h4>
+              <ul class="flow">
+                <li>
+                  <p>Monday-Friday: 08:00-22:00</p>
+                </li>
+                <li>
+                  <p>Tuesday 4PM: Till Mid Night</p>
+                </li>
+                <li>
+                  <p>Saturday: 10:00-16:00</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="primary-footer__form | flow">
+              <h4 class="primary-footer__title">Book a Table</h4>
+              <form
+                action="#"
+                class="row row-cols-sm-2 row-gap-2 col-gap-0 gap-sm-2"
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input type="email" name="email" placeholder="Email" required />
+                <select name="person" required>
+                  <option value="Person">Person</option>
+                  <option value="2 Person">2 Person</option>
+                  <option value="3 Person">3 Person</option>
+                  <option value="4 Person">4 Person</option>
+                </select>
+                <input type="date" name="date" required />
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  required
+                  class="col-12"
+                ></textarea>
+                <button type="submit" class="btn col-9" data-type="primary">
+                  Book a Table
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="primary-footer__copyright row">
+          <p>&copy; 2022 <a href="#">Ghostcode</a> All Rights Reserved.</p>
+        </div>
+      </footer>
+      <!-- End Footer -->
     </div>
     <!-- External Libraries JS Files -->
     <script src="vendors/fontawesome/js/all.min.js"></script>

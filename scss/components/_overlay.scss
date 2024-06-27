@@ -1,0 +1,26 @@
+// COMPONENTS
+//==========================================================
+/*------------
+    #OVERLAY
+ ------------*/
+
+@use "../helpers" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  background-color: $clr-neutral-a95;
+  cursor: url("../imgs/close.png"), auto;
+  transition: $transition-500;
+
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+
+  :has(.nav-search-btn.is-active) & {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

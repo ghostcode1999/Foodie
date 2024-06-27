@@ -1,8 +1,8 @@
 // BASE
 //===========================================================
-/*----------------------------------
+/*---------------
   #BASE STYLES
-----------------------------------*/
+----------------*/
 
 @use "helpers" as *;
 
@@ -16,6 +16,12 @@
     font-size: $body-font-size;
     font-weight: $body-font-weight;
     line-height: 1.6;
+
+    height: 2000px;
+
+    :has(.nav-search-btn.is-active) & {
+      overflow-y: hidden;
+    }
   }
 
   @if length($show-breakpoints) > 0 {
@@ -32,13 +38,18 @@
     }
   }
 
+  /* Pragraphs */
+  p {
+    color: $clr-neutral-500;
+  }
+
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background-color: $clr-primary-800;
+    background-color: $clr-neutral-200;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -53,8 +64,7 @@
 
   /* Placeholder */
   ::placeholder {
-    color: var(--clr-neutral-300);
-    font-weight: 500;
+    color: $clr-neutral-400;
     font-family: inherit;
   }
 }

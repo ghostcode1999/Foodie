@@ -24,6 +24,7 @@ $core-config: (
     "size-rem": $sizes-rem,
     "size-em": $sizes-em,
     "shadow": $shadows,
+    "clip-path": $clip-paths,
     "scheme-color": $scheme-color,
     "transition": $transitions,
     "themes": (
@@ -87,11 +88,19 @@ $core-config: (
   "gap": (
     "items": "size-rem",
     "css-vars": true,
-    "output": "standard",
+    "output": "responsive",
     "property": (
       "gap",
-      "--gap",
+      "--row-gap",
+      "--col-gap",
     ),
+  ),
+  "align-items": (
+    "items": (
+      "center": center,
+    ),
+    "output": "responsive",
+    "property": "align-items",
   ),
   "bg": (
     "items": "clr",

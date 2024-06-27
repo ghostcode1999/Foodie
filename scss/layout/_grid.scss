@@ -1,8 +1,13 @@
 // LAYOUT
 //=======================================================
-/*--------------------------
+
+/*==============
+  ##LAYOUT
+===============*/
+
+/*---------------
   #GRID SYSTEM
----------------------------*/
+----------------*/
 //
 @use "../helpers" as *;
 
@@ -15,8 +20,6 @@
     --row-gap: #{$row-gap};
     --col-gap: #{$col-gap};
     --start: 1;
-
-    --gap: var(--row-gap) var(--col-gap);
 
     display: grid;
     grid-template-columns:
@@ -61,8 +64,19 @@
     --start: 2;
   }
 
+  .wrapper-grid {
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      repeat(
+        calc(var(--col-count) - 2),
+        minmax(0, calc(var(--content-max-width) / (var(--col-count) - 2)))
+      )
+      minmax(1rem, 1fr);
+  }
+
   .row {
     --start: 2;
+    --gap: var(--row-gap) var(--col-gap);
 
     display: grid;
     grid-template-columns: repeat(

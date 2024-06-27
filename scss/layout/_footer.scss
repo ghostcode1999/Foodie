@@ -1,13 +1,15 @@
 // LAYOUT
 //==========================================================
-/*--------------------
-    #FOOTER
----------------------*/
+/*-------------------
+    #PRIMARY FOOTER
+--------------------*/
 
 @use "helpers" as *;
 
 @layer layout {
   .#{$prefix}primary-footer {
+    --_flow-spacer: #{$rem-5};
+
     background-color: $footer-background-color;
     color: $footer-text-color;
 
@@ -20,5 +22,114 @@
         color: $footer-link-color-hover;
       }
     }
+  }
+}
+
+.primary-footer__inner {
+  position: relative;
+  overflow: hidden;
+  padding-block: $em-14;
+  border-block-end: 2px solid $clr-neutral-300;
+  background-image: url("../../assets/imgs/footer-illustration.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &::after {
+    position: absolute;
+    content: url("../imgs/delivery-boy.svg");
+    inset-block-end: -12px;
+    inset-inline-start: -160px;
+    width: 160px;
+    animation: cycling 20s linear infinite;
+  }
+
+  ul {
+    --_flow-spacer: #{$rem-3};
+  }
+}
+
+.primary-footer__social {
+  display: flex;
+  align-items: center;
+  gap: $rem-2;
+
+  a {
+    display: grid;
+    place-content: center;
+    width: $rem-8;
+    aspect-ratio: 1;
+    background-color: $clr-primary-400;
+    color: $clr-neutral-000;
+    transition: $transition-250;
+
+    &:is(:hover, :focus) {
+      background-color: $clr-neutral-1000;
+    }
+  }
+}
+
+.primary-footer__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-block-end: $em-6;
+  color: $clr-neutral-900;
+  font-size: $fs-400;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: calc(100% + 15px);
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(
+      to right,
+      var(--clr-primary-400) 70%,
+      transparent 70%,
+      transparent 85%,
+      var(--clr-primary-400) 85%
+    );
+
+    // ALTERNATIVE
+    // border-inline-end: 5px solid $clr-primary-400;
+    // box-shadow: inset -5px 0 0 $clr-neutral-000;
+    // background: $clr-primary-400;
+  }
+}
+
+.primary-footer__form {
+  padding: $em-6;
+  box-shadow: $shadow-100;
+
+  form {
+    font-size: $fs-300;
+
+    > *:not(button) {
+      padding: $em-3;
+      border: 1px solid $clr-neutral-200;
+      color: $clr-neutral-400;
+
+      &:focus-visible {
+        outline: 2px solid $clr-neutral-1000;
+        outline-offset: 2px;
+      }
+    }
+  }
+}
+
+.primary-footer__copyright {
+  padding: $em-4;
+  text-align: center;
+}
+
+@keyframes cycling {
+  0% {
+    inset-inline-start: -160px;
+  }
+
+  100% {
+    inset-inline-start: 100%;
   }
 }

@@ -1,11 +1,465 @@
 // PAGES
 //==========================================================
-/*--------------------
-    #HOME PAGE
----------------------*/
+/*===============
+    ##HOME PAGE
+================*/
 
 @use "helpers" as *;
 
-/* 
-    #
---------------------------------*/
+/*------------
+    #HERO
+------------*/
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  background-image: url("../imgs/hero-bg.jpg");
+  background-size: cover;
+  z-index: 1;
+
+  @include mq(lg) {
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: url("../imgs/hero-bg-shape.png");
+      background-size: cover;
+      background-position: right;
+    }
+  }
+}
+
+.hero-inner {
+  position: relative;
+  align-items: center;
+  padding-block: $em-13 $em-12;
+
+  > * {
+    grid-row: 1 / -1;
+  }
+}
+
+.hero-content {
+  @include mq($to: lg) {
+    text-align: center;
+  }
+
+  @include mq(lg) {
+    grid-column: 1 / 8;
+  }
+
+  p {
+    color: inherit;
+  }
+}
+
+.hero-banner {
+  grid-column: 6 / -1;
+
+  @include mq($to: lg) {
+    display: none;
+  }
+}
+
+.hero-banner-img {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  max-height: 400px;
+}
+
+/*------------
+    #PROMO
+------------*/
+.promo-wrapper {
+  grid-template-rows: repeat(4, auto);
+
+  > * {
+    grid-row: span 4;
+  }
+}
+
+.promo-item {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: $rem-4;
+  padding: $em-8;
+  background: $clr-neutral-000;
+  box-shadow: $shadow-100;
+  text-align: center;
+  justify-items: center;
+
+  > *:not(img) {
+    transition: $transition-250;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: scaleY(0.3);
+    transform-origin: bottom;
+    clip-path: $clip-path-100;
+    background-color: $clr-primary-500;
+    transition: $transition-250;
+  }
+
+  &:is(:hover, :focus-visible) {
+    color: $clr-neutral-000;
+
+    p {
+      color: inherit;
+    }
+
+    .promo-icon {
+      filter: brightness(0) invert(1);
+    }
+
+    &::after {
+      transform: scaleY(1);
+      clip-path: $clip-path-200;
+    }
+  }
+}
+
+/*------------
+    #ABOUT
+------------*/
+.about {
+  @include mq($to: md) {
+    text-align: center;
+  }
+}
+
+.about-banner {
+  position: relative;
+}
+
+.shape-img {
+  position: absolute;
+  max-width: 40%;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  animation: scale-up 1s linear infinite alternate;
+}
+
+.about-content {
+  ul {
+    --_flow-spacer: #{$rem-3};
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: $rem-3;
+    }
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.1;
+  }
+}
+
+/*---------------
+    #FOOD MENU
+----------------*/
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $rem-3;
+  margin-block-end: $rem-10;
+}
+
+.filter-btn {
+  padding: 0.5em 1.5em;
+  border: 1px solid $clr-neutral-200;
+  background: $clr-neutral-000;
+  font-size: $fs-300;
+  font-weight: $fw-semibold;
+  transition: $transition-250;
+
+  &:is(:hover, :focus-visible, .is-active) {
+    border-color: $clr-primary-400;
+    background-color: $clr-primary-400;
+    color: $clr-neutral-000;
+  }
+}
+
+.menu-list {
+  grid-template-rows: repeat(4, auto);
+
+  > * {
+    grid-row: span 4;
+  }
+}
+
+.menu-item {
+  position: relative;
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: $rem-4;
+  padding: $em-10 $em-8;
+  background-color: $clr-neutral-000;
+  box-shadow: $shadow-200;
+}
+
+.item-badge {
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-start: 20px;
+  display: inline-block;
+  padding: $em-2 $em-5;
+  background-color: $clr-primary-600;
+  color: $clr-neutral-000;
+  font-size: $fs-200;
+  font-weight: $fw-semibold;
+}
+
+.item-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-btn {
+  position: absolute;
+  font-size: $fs-300;
+  transition: $transition-500;
+
+  transform: translateY(100%);
+  opacity: 0;
+
+  .menu-item:is(:hover, :focus-visible) & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.item-cat {
+  color: $clr-neutral-500;
+  font-size: $fs-300;
+  font-weight: $fw-semibold;
+}
+
+.item-price {
+  color: $clr-primary-600;
+  font-weight: $fw-semibold;
+  text-transform: uppercase;
+
+  .new-price {
+    margin-inline: 4px;
+    color: $clr-primary-400;
+  }
+
+  .old-price {
+    color: $clr-neutral-400;
+    text-decoration: line-through;
+  }
+}
+
+/*---------------
+    #CTA
+----------------*/
+.cta {
+  background-image: url("../../assets/imgs/hero-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+
+  &::before {
+    inset-block-start: 0;
+    inset-block-end: auto;
+    background-image: url("../imgs/shape-grey.png");
+    scale: 1 -1;
+  }
+
+  @include mq($to: md) {
+    text-align: center;
+  }
+}
+
+.cta-wrapper {
+  align-items: center;
+}
+
+.cta-banner {
+  position: relative;
+  aspect-ratio: 1 / 0.9;
+
+  .shape-img {
+    inset-inline-start: 0;
+    translate: 0;
+  }
+}
+
+.cta-img {
+  transform: scale(1.3) translateY(60px);
+
+  @include mq(md) {
+    transform: scale(1.3) translate(20px, 40px);
+  }
+}
+
+/*---------------
+    #DELIVERY
+----------------*/
+.delivery {
+  @include mq($to: md) {
+    text-align: center;
+  }
+}
+
+.delivery-wrapper {
+  align-items: center;
+}
+
+.delivery-banner {
+  background-image: url("../imgs/delivery-banner-bg.png");
+  background-size: cover;
+}
+
+.delivery-img {
+  transition: $transition-500;
+}
+
+/*---------------
+    #TESTIMONIALS
+----------------*/
+.review-item {
+  padding: $em-8;
+  background-color: $clr-neutral-000;
+  box-shadow: $shadow-200;
+}
+
+.review-profile {
+  display: flex;
+  align-items: center;
+  gap: $rem-4;
+
+  img {
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+  }
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: $rem-2;
+  color: $clr-primary-600;
+}
+
+/*---------------
+    #BANNER
+----------------*/
+.banner-card {
+  place-content: initial;
+  overflow: hidden;
+
+  &:is(:hover, :focus-visible) {
+    img {
+      scale: 1.2;
+    }
+  }
+
+  :is(figure, img, .banner-content) {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    transition: $transition-500;
+  }
+
+  p {
+    color: inherit;
+  }
+}
+
+.banner-content {
+  z-index: 2;
+  padding: $em-6;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  display: grid;
+  justify-items: flex-start;
+  align-content: center;
+
+  button {
+    font-size: $fs-300;
+  }
+}
+
+.banner-card-sm figure {
+  @include mq($to: lg) {
+    max-height: 200px;
+  }
+}
+
+.banner-card-lg figure {
+  @include mq($to: lg) {
+    max-height: 430px;
+  }
+}
+
+/*---------------
+    #BLOG
+----------------*/
+.blog-card {
+  background-color: $clr-neutral-000;
+  box-shadow: $shadow-200;
+}
+
+.card-banner {
+  position: relative;
+}
+
+.card-badge {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  display: inline-block;
+  background-color: $clr-primary-400;
+  color: $clr-neutral-000;
+  padding: $em-1 $em-4;
+}
+
+.card-content {
+  padding: $em-5;
+}
+
+:is(.card-badge, .card-meta, .card-link) {
+  font-size: $fs-200;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $rem-3 $rem-5;
+}
+
+.card-title {
+  &:is(:hover, :focus-visible) {
+    text-decoration: underline;
+    color: $clr-neutral-800;
+  }
+}
+
+.card-link {
+  display: inline-block;
+}

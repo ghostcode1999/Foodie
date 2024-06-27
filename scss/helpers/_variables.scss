@@ -7,13 +7,13 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $btn-disabled-color
 
-//* Prefix For Classes Names
-//------------------------
+//# Prefix For Classes Names
+//==================================
 //<TIP>: Format: prefix-
 $prefix: "" !default;
 
-//* Media Queries
-//------------------------
+//# Media Queries
+//========================
 /// Breakpoint list
 ///
 /// Name your breakpoints in a way that creates a ubiquitous language
@@ -57,13 +57,15 @@ $media-type: all !default;
 /// @type map
 $show-breakpoints: (sm, md, lg, xl, xxl) !default;
 
-//* Colors
-//------------------------
+//# Colors
+//=======================
+
 // Global color variables
-//--------- NEUTRAL -----------
+//#--------- NEUTRAL -----------
 $-clr-white: hsl(0 0% 100%);
-$-clr-gray-100: hsl(0 0% 95%);
-$-clr-gray-200: hsl(0 0% 82.5%);
+$-clr-gray-100: hsl(38 44% 96%);
+$-clr-gray-150: hsl(0 0% 93%);
+$-clr-gray-200: hsl(0 0% 87%);
 $-clr-gray-300: hsl(0 0% 70%);
 $-clr-gray-400: hsl(0 0% 60%);
 $-clr-gray-500: hsl(0 0% 50%);
@@ -72,145 +74,16 @@ $-clr-gray-700: hsl(0 0% 30%);
 $-clr-gray-800: hsl(0 0% 17.5%);
 $-clr-gray-900: hsl(0 0% 7.5%);
 $-clr-black: hsl(0 0% 0%);
-//--------- ORANGE ----------------
-$-clr-orange-100: hsl(24 75% 95%);
-$-clr-orange-200: hsl(24 75% 82.5%);
-$-clr-orange-300: hsl(24 75% 70%);
-$-clr-orange-400: hsl(24 75% 60%);
-$-clr-orange-500: hsl(24 75% 50%);
-$-clr-orange-600: hsl(24 75% 40%);
-$-clr-orange-700: hsl(24 75% 30%);
-$-clr-orange-800: hsl(24 75% 17.5%);
-$-clr-orange-900: hsl(24 75% 7.5%);
-//--------- YELLOW ----------------
-$-clr-yellow-100: hsl(48 75% 95%);
-$-clr-yellow-200: hsl(48 75% 82.5%);
-$-clr-yellow-300: hsl(48 75% 70%);
-$-clr-yellow-400: hsl(48 75% 60%);
-$-clr-yellow-500: hsl(48 75% 50%);
-$-clr-yellow-600: hsl(48 75% 40%);
-$-clr-yellow-700: hsl(48 75% 30%);
-$-clr-yellow-800: hsl(48 75% 17.5%);
-$-clr-yellow-900: hsl(48 75% 7.5%);
-//--------- YELLOWGREEN ------------------
-$-clr-yellowgreen-100: hsl(72 75% 95%);
-$-clr-yellowgreen-200: hsl(72 75% 82.5%);
-$-clr-yellowgreen-300: hsl(72 75% 70%);
-$-clr-yellowgreen-400: hsl(72 75% 60%);
-$-clr-yellowgreen-500: hsl(72 75% 50%);
-$-clr-yellowgreen-600: hsl(72 75% 40%);
-$-clr-yellowgreen-700: hsl(72 75% 30%);
-$-clr-yellowgreen-800: hsl(72 75% 17.5%);
-$-clr-yellowgreen-900: hsl(72 75% 7.5%);
-//--------- GREEN --------------
-$-clr-green-100: hsl(96 75% 95%);
-$-clr-green-200: hsl(96 75% 82.5%);
-$-clr-green-300: hsl(96 75% 70%);
-$-clr-green-400: hsl(96 75% 60%);
-$-clr-green-500: hsl(96 75% 50%);
-$-clr-green-600: hsl(96 75% 40%);
-$-clr-green-700: hsl(96 75% 30%);
-$-clr-green-800: hsl(96 75% 17.5%);
-$-clr-green-900: hsl(96 75% 7.5%);
-//--------- LIME --------------
-$-clr-lime-100: hsl(144 75% 95%);
-$-clr-lime-200: hsl(144 75% 82.5%);
-$-clr-lime-300: hsl(144 75% 70%);
-$-clr-lime-400: hsl(144 75% 60%);
-$-clr-lime-500: hsl(144 75% 50%);
-$-clr-lime-600: hsl(144 75% 40%);
-$-clr-lime-700: hsl(144 75% 30%);
-$-clr-lime-800: hsl(144 75% 17.5%);
-$-clr-lime-900: hsl(144 75% 7.5%);
-//--------- TURQUOISE ------------------
-$-clr-turquoise-100: hsl(168 75% 95%);
-$-clr-turquoise-200: hsl(168 75% 82.5%);
-$-clr-turquoise-300: hsl(168 75% 70%);
-$-clr-turquoise-400: hsl(168 75% 60%);
-$-clr-turquoise-500: hsl(168 75% 50%);
-$-clr-turquoise-600: hsl(168 75% 40%);
-$-clr-turquoise-700: hsl(168 75% 30%);
-$-clr-turquoise-800: hsl(168 75% 17.5%);
-$-clr-turquoise-900: hsl(168 75% 7.5%);
-//--------- CYAN --------------
-$-clr-cyan-100: hsl(192 75% 95%);
-$-clr-cyan-200: hsl(192 75% 82.5%);
-$-clr-cyan-300: hsl(192 75% 70%);
-$-clr-cyan-400: hsl(192 75% 60%);
-$-clr-cyan-500: hsl(192 75% 50%);
-$-clr-cyan-600: hsl(192 75% 40%);
-$-clr-cyan-700: hsl(192 75% 30%);
-$-clr-cyan-800: hsl(192 75% 17.5%);
-$-clr-cyan-900: hsl(192 75% 7.5%);
-//--------- SKYBLUE -----------------
-$-clr-skyblue-100: hsl(202 100% 95%);
-$-clr-skyblue-200: hsl(202 100% 82.5%);
-$-clr-skyblue-300: hsl(202 100% 70%);
-$-clr-skyblue-400: hsl(202 100% 60%);
-$-clr-skyblue-500: hsl(202 100% 50%);
-$-clr-skyblue-600: hsl(202 100% 40%);
-$-clr-skyblue-700: hsl(202 100% 30%);
-$-clr-skyblue-800: hsl(202 100% 17.5%);
-$-clr-skyblue-900: hsl(202 100% 7.5%);
-//--------- BLUE ---------------
-$-clr-blue-100: hsl(240 75% 95%);
-$-clr-blue-200: hsl(240 75% 82.5%);
-$-clr-blue-300: hsl(240 75% 70%);
-$-clr-blue-400: hsl(240 75% 60%);
-$-clr-blue-500: hsl(240 75% 50%);
-$-clr-blue-600: hsl(240 75% 40%);
-$-clr-blue-700: hsl(240 75% 30%);
-$-clr-blue-800: hsl(240 75% 17.5%);
-$-clr-blue-900: hsl(240 75% 7.5%);
-//--------- PURPLE -----------------
-$-clr-purple-100: hsl(264 75% 95%);
-$-clr-purple-200: hsl(264 75% 82.5%);
-$-clr-purple-300: hsl(264 75% 70%);
-$-clr-purple-400: hsl(264 75% 60%);
-$-clr-purple-500: hsl(264 75% 50%);
-$-clr-purple-600: hsl(264 75% 40%);
-$-clr-purple-700: hsl(264 75% 30%);
-$-clr-purple-800: hsl(264 75% 17.5%);
-$-clr-purple-900: hsl(288 75% 95%);
-//--------- MAGENTA -------------------
-$-clr-magenta-200: hsl(288 75% 82.5%);
-$-clr-magenta-300: hsl(288 75% 70%);
-$-clr-magenta-400: hsl(288 75% 60%);
-$-clr-magenta-500: hsl(288 75% 50%);
-$-clr-magenta-600: hsl(288 75% 40%);
-$-clr-magenta-700: hsl(288 75% 30%);
-$-clr-magenta-800: hsl(288 75% 17.5%);
-$-clr-magenta-900: hsl(288 75% 7.5%);
-//--------- PINK ------------------
-$-clr-pink-100: hsl(312 75% 95%);
-$-clr-pink-200: hsl(312 75% 82.5%);
-$-clr-pink-300: hsl(312 75% 70%);
-$-clr-pink-400: hsl(312 75% 60%);
-$-clr-pink-500: hsl(312 75% 50%);
-$-clr-pink-600: hsl(312 75% 40%);
-$-clr-pink-700: hsl(312 75% 30%);
-$-clr-pink-800: hsl(312 75% 17.5%);
-$-clr-pink-900: hsl(312 75% 7.5%);
-//--------- DEEPPINK -------------------
-$-clr-deeppink-100: hsl(317 100% 95%);
-$-clr-deeppink-200: hsl(317 100% 82.5%);
-$-clr-deeppink-300: hsl(317 100% 70%);
-$-clr-deeppink-400: hsl(317 100% 60%);
-$-clr-deeppink-500: hsl(317 100% 50%);
-$-clr-deeppink-600: hsl(317 100% 40%);
-$-clr-deeppink-700: hsl(317 100% 30%);
-$-clr-deeppink-800: hsl(317 100% 17.5%);
-$-clr-deeppink-900: hsl(317 100% 7.5%);
-//--------- RED ---------------
-$-clr-red-100: hsl(0 75% 95%);
-$-clr-red-200: hsl(0 75% 82.5%);
-$-clr-red-300: hsl(0 75% 70%);
-$-clr-red-400: hsl(0 75% 60%);
-$-clr-red-500: hsl(0 75% 50%);
-$-clr-red-600: hsl(0 75% 40%);
-$-clr-red-700: hsl(0 75% 30%);
-$-clr-red-800: hsl(0 75% 17.5%);
-$-clr-red-900: hsl(0 75% 7.5%);
+$-clr-gray-a95: hsla(0 0% 0% / 0.95);
+$-clr-gray-a30: hsla(245 17% 29% / 0.3);
+//#--------- ORANGE ----------------
+$-clr-orange-100: hsl(23 61% 86%);
+$-clr-orange-200: hsl(23 49% 82%);
+$-clr-orange-300: hsl(32 100% 59%);
+$-clr-orange-400: hsl(28 100% 58%);
+$-clr-orange-500: hsl(31 84% 50%);
+$-clr-orange-600: hsl(3 90% 55%);
+$-clr-orange-a20: hsla(23 61% 86% / 0.2);
 
 // Color maps for creating utility classes
 $light: (
@@ -226,28 +99,17 @@ $light: (
     "800": $-clr-gray-800,
     "900": $-clr-gray-900,
     "1000": $-clr-black,
+    "a95": $-clr-gray-a95,
+    "a30": $-clr-gray-a30,
   ),
   "primary": (
-    "100": $-clr-skyblue-100,
-    "200": $-clr-skyblue-200,
-    "300": $-clr-skyblue-300,
-    "400": $-clr-skyblue-400,
-    "500": $-clr-skyblue-500,
-    "600": $-clr-skyblue-600,
-    "700": $-clr-skyblue-700,
-    "800": $-clr-skyblue-800,
-    "900": $-clr-skyblue-900,
-  ),
-  "accent": (
-    "100": $-clr-deeppink-100,
-    "200": $-clr-deeppink-200,
-    "300": $-clr-deeppink-300,
-    "400": $-clr-deeppink-400,
-    "500": $-clr-deeppink-500,
-    "600": $-clr-deeppink-600,
-    "700": $-clr-deeppink-700,
-    "800": $-clr-deeppink-800,
-    "900": $-clr-deeppink-900,
+    "100": $-clr-orange-100,
+    "200": $-clr-orange-200,
+    "300": $-clr-orange-300,
+    "400": $-clr-orange-400,
+    "500": $-clr-orange-500,
+    "600": $-clr-orange-600,
+    "a20": $-clr-orange-a20,
   ),
 );
 
@@ -264,28 +126,17 @@ $dark: (
     "200": $-clr-gray-800,
     "100": $-clr-gray-900,
     "000": $-clr-black,
+    "a95": $-clr-gray-a95,
+    "a30": $-clr-gray-a30,
   ),
   "primary": (
-    "900": $-clr-skyblue-900,
-    "800": $-clr-skyblue-800,
-    "700": $-clr-skyblue-700,
-    "600": $-clr-skyblue-600,
-    "500": $-clr-skyblue-500,
-    "400": $-clr-skyblue-400,
-    "300": $-clr-skyblue-300,
-    "200": $-clr-skyblue-200,
-    "100": $-clr-skyblue-100,
-  ),
-  "accent": (
-    "900": $-clr-deeppink-900,
-    "800": $-clr-deeppink-800,
-    "700": $-clr-deeppink-700,
-    "600": $-clr-deeppink-600,
-    "500": $-clr-deeppink-500,
-    "400": $-clr-deeppink-400,
-    "300": $-clr-deeppink-300,
-    "200": $-clr-deeppink-200,
-    "100": $-clr-deeppink-100,
+    "600": $-clr-orange-600,
+    "500": $-clr-orange-500,
+    "400": $-clr-orange-400,
+    "300": $-clr-orange-300,
+    "200": $-clr-orange-200,
+    "100": $-clr-orange-100,
+    "a20": $-clr-orange-a20,
   ),
 );
 
@@ -301,6 +152,8 @@ $clr-neutral-700: var(--clr-neutral-700);
 $clr-neutral-800: var(--clr-neutral-800);
 $clr-neutral-900: var(--clr-neutral-900);
 $clr-neutral-1000: var(--clr-neutral-1000);
+$clr-neutral-a95: var(--clr-neutral-a95);
+$clr-neutral-a30: var(--clr-neutral-a30);
 
 $clr-primary-100: var(--clr-primary-100);
 $clr-primary-200: var(--clr-primary-200);
@@ -308,32 +161,20 @@ $clr-primary-300: var(--clr-primary-300);
 $clr-primary-400: var(--clr-primary-400);
 $clr-primary-500: var(--clr-primary-500);
 $clr-primary-600: var(--clr-primary-600);
-$clr-primary-700: var(--clr-primary-700);
-$clr-primary-800: var(--clr-primary-800);
-$clr-primary-900: var(--clr-primary-900);
-
-$clr-accent-100: var(--clr-accent-100);
-$clr-accent-200: var(--clr-accent-200);
-$clr-accent-300: var(--clr-accent-300);
-$clr-accent-400: var(--clr-accent-400);
-$clr-accent-500: var(--clr-accent-500);
-$clr-accent-600: var(--clr-accent-600);
-$clr-accent-700: var(--clr-accent-700);
-$clr-accent-800: var(--clr-accent-800);
-$clr-accent-900: var(--clr-accent-900);
+$clr-primary-a20: var(--clr-primary-a20);
 
 // Base used colors
 $clr-text-default: $clr-neutral-900;
-$clr-bg-default: $clr-primary-100;
+$clr-bg-default: $clr-neutral-000;
 $clr-text-interactive-default: inherit;
-$clr-text-interactive-hover: $clr-accent-800;
+$clr-text-interactive-hover: $clr-primary-400;
 
-//* Typography
-//------------------------
+//# Typography
+//==================
 // Font families map for creating utility classes
 $font-families: (
   "base": "Poppins, sans-serif",
-  "accent": "MuseoModerno, cursive",
+  "accent": "Shadows Into Light, cursive",
 );
 
 // Font family variables for general use in the codebase
@@ -387,8 +228,8 @@ $fs-900: var(--fs-900);
 
 $letter-spacing-loose: 0;
 
-//* Spacing and sizing
-//------------------------
+//# Spacing and sizing
+//======================
 // Sizes map for creating utility classes
 $sizes-rem: (
   0: 0,
@@ -463,51 +304,44 @@ $em-13: var(--size-em-13);
 $em-14: var(--size-em-14);
 $em-15: var(--size-em-15);
 
-//* Theme
+//# Theme
 //------------------------
 $scheme-color: light;
 $active-theme: $light;
-$enable-mq-dark-mode: false;
+$enable-mq-dark-mode: true;
 
-//* Borders
-//------------------------
-$border-radius: (
-  "100": var(--em-1),
-  "200": var(--em-2),
-  "300": var(--em-3),
-  "400": var(--em-4),
-);
-
-$radius-100: var(--radius-100);
-$radius-200: var(--radius-200);
-$radius-300: var(--radius-300);
-$radius-400: var(--radius-400);
-
-//* Box Shadows
+//# Box Shadows
 //------------------------
 $shadows: (
-  "100": 0 0.5em 1em rgba(0, 0, 0, 0.15),
-  "200":
-    "0px 6px 5px rgb(0, 0, 0, 0.016), 0px 22px 18px rgb(0, 0, 0, 0.024), 0px 100px 80px rgb(0, 0, 0, 0.04)",
+  "100": 0 1px 4px hsla(0, 0%, 0%, 0.2),
+  "200": 0 1px 2px hsla(0, 0%, 0%, 0.2),
 );
 
 $shadow-100: var(--shadow-100);
 $shadow-200: var(--shadow-200);
 
-//* Transitions
+//# Transitions
 //-----------------
 $transitions: (
   "250": 250ms ease,
   "500": 500ms ease,
-  "cubic-out": cubic-bezier(0.05, 0.83, 0.52, 0.97),
 );
 
 $transition-250: var(--transition-250);
 $transition-500: var(--transition-500);
-$transition-cubic-out: var(--transition-cubic-out);
 
-//* Body
-//------------------------------
+//# Clip Path
+//==============
+$clip-paths: (
+  "100": polygon(0 40%, 100% 0%, 100% 100%, 0 100%),
+  "200": polygon(0 0%, 100% 0%, 100% 100%, 0 100%),
+);
+
+$clip-path-100: var(--clip-path-100);
+$clip-path-200: var(--clip-path-200);
+
+//# Body
+//==============
 $body-font-family: $ff-base;
 $body-font-size: $fs-400;
 $body-line-height: 1.5;
@@ -515,18 +349,18 @@ $body-font-weight: $fw-normal;
 $body-text-color: $clr-text-default;
 $body-background-color: $clr-bg-default;
 
-//* Links
-//-----------------------------
+//# Links
+//=============
 $link-color: $clr-text-interactive-default;
 $link-color-hover: $clr-text-interactive-hover;
 
-//* Headings
-//---------------------------
+//# Headings
+//=============
 $heading-font-family: $ff-accent;
-$heading-color-default: $clr-neutral-900;
+$heading-color-default: inherit;
 $heading-font-weight: $fw-bold;
 $heading-letter-spacing: $letter-spacing-loose;
-$heading-line-height: 1.1;
+$heading-line-height: 1.2;
 $heading-text-transform: uppercase;
 
 $heading-1-font-size: $fs-900;
@@ -536,13 +370,13 @@ $heading-2-color: $heading-color-default;
 $heading-3-font-size: $fs-700;
 $heading-3-color: $heading-color-default;
 
-//* Layout
-//---------------------
+//# Layout
+//============
 $grid-gap: $rem-6;
 $flex-group-gap: $rem-4;
 
-//* Wrapper
-//---------------------------
+//# Wrapper
+//=============
 $wrapper-padding-inline: $rem-4;
 $wrapper-max-width: 100%;
 $wrapper-max-width-narrow: 40rem;
@@ -554,11 +388,12 @@ $wrapper-max-width-lg: 60rem;
 $wrapper-max-width-xl: 71.25rem;
 $wrapper-max-width-xxl: 82.5rem;
 
-//* Flow
-//----------------------------
+//# Flow
+//==============
 $flow-spacer: $rem-4;
 
-//#GRID SYSTEM
+//# GRID SYSTEM
+//==============
 $col-count: 12;
 $row-gap: $rem-4;
 $col-gap: $rem-4;
@@ -624,14 +459,10 @@ $content-max-width-lg: $wrapper-max-width-lg;
 $content-max-width-xl: $wrapper-max-width-xl;
 $content-max-width-xxl: $wrapper-max-width-xxl;
 
-//* Primary Header
-//----------------------------
-$primary-header-position: sticky;
-$primary-header-background: linear-gradient(
-  to right,
-  var(--clr-accent-500),
-  var(--clr-primary-500)
-);
+//# Primary Header
+//====================
+$primary-header-position: fixed;
+$primary-header-background: transparent;
 $primary-header-color: $clr-neutral-100;
 $primary-header-padding: $em-4 0;
 $primary-header-margin: 0;
@@ -639,46 +470,44 @@ $primary-header-jusitifcation-sm: center;
 $primary-header-jusitifcation-lg: space-between;
 $primary-header-alignment: center;
 
-//* Primary Navigation
-//-----------------------------
-$navigation-color: $primary-header-color;
-$navigation-color-hover: $clr-accent-300;
-$navigation-font-size: $fs-300;
+//# Primary Navigation
+//=======================
+$navigation-color: $clr-primary-100;
+$navigation-color-hover: $clr-primary-400;
+$navigation-font-size: $fs-400;
 $navigation-font-weight: $fw-medium;
-$navigation-text-transform: uppercase;
+$navigation-text-transform: null;
 $navigation-gap: $rem-6;
 $navigation-link-text-decoration: none;
 
-//* Primary Footer
-//---------------------------
-$footer-background-color: $clr-primary-300;
-$footer-text-color: $clr-primary-900;
-$footer-link-color: $clr-neutral-100;
-$footer-link-color-hover: $clr-primary-200;
+//# Primary Footer
+//===================
+$footer-background-color: null;
+$footer-text-color: $clr-neutral-400;
+$footer-link-color: $clr-neutral-500;
+$footer-link-color-hover: $clr-primary-400;
 $footer-link-text-decoration: none;
 
-//* Buttons
-//---------------------------
-$button-padding: 0.75em 2em;
+//# Buttons
+//=================
+$button-padding: 0.875em 2em;
 $button-border: 0;
-$button-border-radius: $radius-100;
+$button-border-radius: 0;
 $button-background: transparent;
 $button-color: inherit;
 $button-font-family: $body-font-family;
 $button-font-size: $fs-400;
-$button-font-weight: $fw-bold;
+$button-font-weight: $fw-medium;
 $button-text-transform: null;
 
 $button-primary-color: $clr-neutral-100;
 $button-primary-background: $clr-primary-400;
-$button-primary-color-hover: $clr-neutral-100;
-$button-primary-background-hover: $clr-primary-600;
-$button-accent-color: $clr-neutral-100;
-$button-accent-background: $clr-accent-400;
-$button-accent-color-hover: $clr-neutral-100;
-$button-accent-background-hover: $clr-accent-600;
+$button-primary-background-hover: $clr-neutral-900;
 
-//* Sections
-//---------------------------
-$hero-padding-block: clamp(15rem, 15vh, 20rem);
-$section-padding-block: clamp(5rem, 10vh, 6rem);
+$button-accent-color: $clr-neutral-000;
+$button-accent-background: $clr-primary-600;
+$button-accent-background-hover: $clr-primary-400;
+
+//# Sections
+//==================
+$section-padding-block: 60px;

@@ -1,20 +1,13 @@
 // COMPONENTS
 //==========================================================
-/*---------------------------
+/*------------
     #BUTTONS
- ---------------------------*/
+-------------*/
 
-// This is an example of a button component partial
 @use "../helpers" as *;
 
-//** Buttons specific variables
-// ...
-// … include any button-specific:
-// - functions
-// - mixins
-// - placeholders
+//# Base styles //
 
-//** Base styles: basic classes **//
 .#{$prefix}btn {
   --_button-padding: #{$button-padding};
   --_button-border: #{$button-border};
@@ -26,10 +19,11 @@
   --_button-font-weight: #{$button-font-weight};
   --_button-text-transform: #{$button-text-transform};
 
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  // width: fit-content;
   padding: var(--_button-padding);
   border: var(--_button-border);
   border-radius: var(--_button-border-radius);
@@ -39,21 +33,41 @@
   font-size: var(--_button-font-size);
   font-weight: var(--_button-font-weight);
   line-height: 1;
-  @if (var(--_button-text-transform)) {
-    text-transform: var(--_button-text-transform);
-  }
+  text-transform: var(--_button-text-transform);
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
   cursor: pointer;
   transition: $transition-250;
 
-  //** Alternate buttons: modifiers **//
+  //# Alternate buttons: modifiers //
+
   &[data-type="primary"] {
     --_button-background: #{$button-primary-background};
     --_button-color: #{$button-primary-color};
 
-    &:is(:hover, :focus-visible) {
+    &:not(.btn-hover):is(:hover, :focus-visible) {
       --_button-background: #{$button-primary-background-hover};
-      --_button-color: #{$button-primary-color-hover};
+    }
+
+    &.btn-hover::before {
+      content: "";
+      position: absolute;
+      inset-block-end: -1px;
+      inset-inline-start: 20px;
+      width: 1px;
+      height: 1px;
+      border-radius: 50%;
+      scale: var(--scale, 1);
+      z-index: -1;
+      transform: translate(-50% 51%);
+      background-color: var(--clr-neutral-1000);
+
+      transition: $transition-500;
+    }
+
+    &:is(:hover, :focus-visible) {
+      --scale: 500;
     }
   }
 
@@ -63,16 +77,6 @@
 
     &:is(:hover, :focus-visible) {
       --_button-background: #{$button-accent-background-hover};
-      --_button-color: #{$button-accent-color-hover};
     }
   }
-}
-
-//** Button Sizes
-.#{$prefix}btn-lg {
-  // ...
-}
-
-.#{$prefix}btn-sm {
-  // ...
 }

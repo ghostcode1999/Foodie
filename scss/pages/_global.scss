@@ -1,8 +1,8 @@
 // PAGES
 //==========================================================
-/*====================
-    #GLOBAL RULES
-======================*/
+/*=================
+    ##GLOBAL RULES
+===================*/
 
 // This file can contain global rules shared by all pages
 @use "helpers" as *;
@@ -10,6 +10,50 @@
 /*-------------
     #SECTIONS
 --------------*/
-  .section {
-    padding-block: $section-padding-block;
+.section {
+  padding-block: $section-padding-block;
+
+  @include mq(lg) {
+    padding-block: 120px;
   }
+}
+
+.section__header {
+  margin-block-end: $rem-8;
+  text-align: center;
+}
+
+.section__title {
+  font-family: $ff-base;
+  font-size: $fs-400;
+  color: $clr-primary-600;
+}
+
+.section__subtitle {
+  font-size: $fs-800;
+}
+
+.section-with-divider {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    width: 100%;
+    height: 15px;
+    background-size: cover;
+  }
+
+  &::after {
+    background: url("../imgs/shape-white.png");
+  }
+
+  &.grey {
+    &::after {
+      background: url("../imgs/shape-grey.png");
+    }
+  }
+}
